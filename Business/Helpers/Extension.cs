@@ -8,18 +8,21 @@ namespace Business.Helpers
     {
         const string NewLine = "\r\n";
         const string Separator = ";";
-        const string Header = "BEGIN:VCARD\r\nVERSION:2.1";
+        const string Header = "BEGIN:VCARD\r\nVERSION:3.0";
         const string Name = "N:";
         const string FormattedName = "FN:";
         const string OrganizationName = "ORG:";
         const string TitlePrefix = "TITLE:";
-        const string PhotoPrefix = "PHOTO;ENCODING=BASE64;JPEG:";
-        const string PhonePrefix = "TEL;TYPE=";
+        const string PhotoPrefix = "PHOTO;ENCODING=b;TYPE=JPEG:";
+        const string PhonePrefix = "TEL;type=";
         const string PhoneSubPrefix = ",VOICE:";
-        const string AddressPrefix = "ADR;TYPE=";
+        const string AddressPrefix = "ADR;type=";
         const string AddressSubPrefix = ":;;";
-        const string EmailPrefix = "EMAIL:";
+        const string EmailPrefix = "EMAIL;type=";
+        const string WebSitePrefix = "item1.X-ABLabel:";
+        const string WebSite = "item1.URL:";
         const string Footer = "END:VCARD";
+        const string TwoDots = ":";
 
         public static string CreateVCard(this Contact contact)
         {
@@ -51,8 +54,12 @@ namespace Business.Helpers
             {
                 fw.Append(OrganizationName);
                 fw.Append(contact.Organization);
+                if (!string.IsNullOrEmpty(contact.OrganizationPosition))
+                {
+                    fw.Append(Separator);
+                    fw.Append(contact.OrganizationPosition);
+                }
                 fw.Append(NewLine);
-
             }
 
             //Title
@@ -63,11 +70,23 @@ namespace Business.Helpers
                 fw.Append(NewLine);
             }
 
+            if (!string.IsNullOrEmpty(contact.WebSite))
+            {
+                fw.Append(WebSite);
+                fw.Append(contact.WebSite);
+                if (!string.IsNullOrEmpty(contact.WebSiteTitle))
+                {
+                    fw.Append(NewLine);
+                    fw.Append(WebSitePrefix);
+                    fw.Append(contact.WebSiteTitle);
+                    fw.Append(NewLine);
+                }
+            }
+
             //Photo
             if (!string.IsNullOrEmpty(contact.Photo))
             {
                 fw.Append(PhotoPrefix);
-                //fw.Append(contact.Photo.ConvertImageURLToBase64());
                 fw.Append(contact.Photo);
                 fw.Append(NewLine);
                 fw.Append(NewLine);
@@ -84,7 +103,7 @@ namespace Business.Helpers
             }
 
             //Addresses
-            foreach (var item in contact.Addresses)
+            foreach (var item in contact.Addresses ?? new List<Address>())
             {
                 fw.Append(AddressPrefix);
                 fw.Append(item.Type);
@@ -94,58 +113,18 @@ namespace Business.Helpers
             }
 
             //Email
-            if (!string.IsNullOrEmpty(contact.Email))
+            foreach (var item in contact.Email)
             {
                 fw.Append(EmailPrefix);
-                fw.Append(contact.Email);
+                fw.Append(item.Type);
+                fw.Append(TwoDots);
+                fw.Append(item.Address);
                 fw.Append(NewLine);
             }
 
             fw.Append(Footer);
 
             return fw.ToString();
-        }
-
-        private static string ConvertImageURLToBase64(this string url)
-        {
-            StringBuilder _sb = new StringBuilder();
-
-            Byte[] _byte = url.GetImage();
-
-            _sb.Append(Convert.ToBase64String(_byte, 0, _byte.Length));
-
-            return _sb.ToString();
-        }
-
-        private static byte[] GetImage(this string url)
-        {
-            Stream stream = null;
-            byte[] buf;
-
-            try
-            {
-                WebProxy myProxy = new WebProxy();
-                HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
-
-                HttpWebResponse response = (HttpWebResponse)req.GetResponse();
-                stream = response.GetResponseStream();
-
-                using (BinaryReader br = new BinaryReader(stream))
-                {
-                    int len = (int)(response.ContentLength);
-                    buf = br.ReadBytes(len);
-                    br.Close();
-                }
-
-                stream.Close();
-                response.Close();
-            }
-            catch (Exception exp)
-            {
-                buf = null;
-            }
-
-            return (buf);
         }
     }
 }

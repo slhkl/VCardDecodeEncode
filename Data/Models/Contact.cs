@@ -6,9 +6,12 @@
         public string LastName { get; set; }
         public string FormattedName { get; set; }
         public string Organization { get; set; }
-        public string Email { get; set; }
+        public string OrganizationPosition { get; set; }
         public string Title { get; set; }
         public string Photo { get; set; }
+        public string WebSiteTitle { get; set; }
+        public string WebSite { get; set; }
+        public List<EMail> Email { get; set; }
         public List<Phone> Phones { get; set; }
         public List<Address> Addresses { get; set; }
     }
