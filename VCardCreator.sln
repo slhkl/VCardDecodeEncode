@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VCardEncodeDecode.Data", "Data\VCardEncodeDecode.Data.csproj", "{64E57DBA-B393-4AC7-92C1-6792E95C31CA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VCardEncodeDecode", "Business\VCardEncodeDecode.csproj", "{0A1E3C18-6490-4118-8237-5D02FC6C9F22}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console", "Console\Console.csproj", "{67F732C3-830F-4CDB-87AC-C8DA08430E56}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VCardEncodeDecode", "VCardEncodeDecode\VCardEncodeDecode.csproj", "{6D40E4B1-14EB-4330-B817-1B6CC541BA02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VCardEncodeDecode.Data", "VCardEncodeDecode.Data\VCardEncodeDecode.Data.csproj", "{F72DEEB2-0786-4DE4-B61A-A5811C09E612}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{64E57DBA-B393-4AC7-92C1-6792E95C31CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64E57DBA-B393-4AC7-92C1-6792E95C31CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64E57DBA-B393-4AC7-92C1-6792E95C31CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64E57DBA-B393-4AC7-92C1-6792E95C31CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0A1E3C18-6490-4118-8237-5D02FC6C9F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A1E3C18-6490-4118-8237-5D02FC6C9F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A1E3C18-6490-4118-8237-5D02FC6C9F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A1E3C18-6490-4118-8237-5D02FC6C9F22}.Release|Any CPU.Build.0 = Release|Any CPU
 		{67F732C3-830F-4CDB-87AC-C8DA08430E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{67F732C3-830F-4CDB-87AC-C8DA08430E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67F732C3-830F-4CDB-87AC-C8DA08430E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67F732C3-830F-4CDB-87AC-C8DA08430E56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D40E4B1-14EB-4330-B817-1B6CC541BA02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D40E4B1-14EB-4330-B817-1B6CC541BA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D40E4B1-14EB-4330-B817-1B6CC541BA02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D40E4B1-14EB-4330-B817-1B6CC541BA02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F72DEEB2-0786-4DE4-B61A-A5811C09E612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72DEEB2-0786-4DE4-B61A-A5811C09E612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F72DEEB2-0786-4DE4-B61A-A5811C09E612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F72DEEB2-0786-4DE4-B61A-A5811C09E612}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

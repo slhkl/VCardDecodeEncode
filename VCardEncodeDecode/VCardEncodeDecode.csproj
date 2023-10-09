@@ -20,7 +20,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Data\VCardEncodeDecode.Data.csproj" />
+		<ProjectReference Include="..\VCardEncodeDecode.Data\VCardEncodeDecode.Data.csproj" />
 	</ItemGroup>
 
 </Project>
