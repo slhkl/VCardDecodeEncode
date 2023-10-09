@@ -1,5 +1,5 @@
-﻿using Business.Helpers;
-using Data.Models;
+﻿using VCardEncodeDecode.Data.Models;
+using VCardEncodeDecode.Helpers;
 
 Contact contact = new Contact
 {

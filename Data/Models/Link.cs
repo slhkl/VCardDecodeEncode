@@ -1,4 +1,4 @@
-﻿namespace Data.Models
+﻿namespace VCardEncodeDecode.Data.Models
 {
     public class Link
     {

@@ -1,8 +1,8 @@
-﻿using Data.Models;
-using System.Net;
+﻿using System.Net;
 using System.Text;
+using VCardEncodeDecode.Data.Models;
 
-namespace Business.Helpers
+namespace VCardEncodeDecode.Helpers
 {
     public static class Extension
     {

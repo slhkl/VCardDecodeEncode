@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{64E57DBA-B393-4AC7-92C1-6792E95C31CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VCardEncodeDecode.Data", "Data\VCardEncodeDecode.Data.csproj", "{64E57DBA-B393-4AC7-92C1-6792E95C31CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{0A1E3C18-6490-4118-8237-5D02FC6C9F22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VCardEncodeDecode", "Business\VCardEncodeDecode.csproj", "{0A1E3C18-6490-4118-8237-5D02FC6C9F22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{67F732C3-830F-4CDB-87AC-C8DA08430E56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console", "Console\Console.csproj", "{67F732C3-830F-4CDB-87AC-C8DA08430E56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
