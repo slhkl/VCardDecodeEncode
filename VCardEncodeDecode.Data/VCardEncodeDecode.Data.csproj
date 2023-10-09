@@ -1,9 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<PackageId>VCardEncodeDecode.Data</PackageId>
+		<Version>1.1.0</Version>
+		<Title>VCardEncodeDecode.Data</Title>
+		<Authors>Slhkl</Authors>
+		<RepositoryUrl>https://github.com/slhkl/VCardDecodeEncode</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/slhkl/VCardDecodeEncode</PackageProjectUrl>
+		<PackageTags>VCard</PackageTags>
+		<Description>
+			You can perform VCard decode and encode operations by using the contact class in the project.
+		</Description>
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+	</PropertyGroup>
 
 </Project>
