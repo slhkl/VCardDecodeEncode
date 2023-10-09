@@ -41,7 +41,7 @@ namespace VCardEncodeDecode.Helpers
 
             var names = splittedVCard.FirstOrDefault(s => s.StartsWith(Name))?.Replace(";", ":").Split(":") ?? Array.Empty<string>();
             var firstNames = names.Length > 0 ? names.TakeLast(names.Length - 2) : Array.Empty<string>();
-            contact.FirstName = string.Join(" ", firstNames);
+            contact.FirstName = string.Join(" ", firstNames.Where(f => !string.IsNullOrWhiteSpace(f)));
             contact.LastName = names[1];
 
             var organizasion = splittedVCard.FirstOrDefault(s => s.StartsWith(OrganizationName))?.Replace(";", ":").Split(":");
@@ -52,7 +52,7 @@ namespace VCardEncodeDecode.Helpers
             contact.Title = string.Join(":", title.Length > 0 ? title.TakeLast(title.Length - 1) : Array.Empty<string>());
 
             var photoBase64 = splittedVCard.FirstOrDefault(s => s.StartsWith(PhotoPrefix))?.Split(PhotoPrefix).LastOrDefault();
-            contact.Photo = "data:image/jpeg;base64," + photoBase64;
+            contact.Photo = !string.IsNullOrWhiteSpace(photoBase64) ? "data:image/jpeg;base64," + photoBase64 : null;
 
             var emails = splittedVCard.Where(s => s.StartsWith(EmailPrefix));
             foreach (var item in emails)

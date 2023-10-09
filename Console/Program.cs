@@ -6,11 +6,11 @@ Contact contact = new Contact
     FirstName = "Salih",
     LastName = "Kol",
     FormattedName = "Salih Kol",
-    //Addresses = new List<Address>
-    //{
-    //    { new Address() { Description = "Maslak, Ahi Evran Cd. No:6, 34485 Sarıyer/İstanbul", Type = "Home" } },
-    //    { new Address() { Description = "RAMS Park, Huzur Mh., Metin Oktay Caddesi, 34386 Sarıyer/İstanbul", Type = "Work" } }
-    //},
+    Addresses = new List<Address>
+    {
+        { new Address() { Description = "Maslak, Ahi Evran Cd. No:6, 34485 Sarıyer/İstanbul", Type = "Home" } },
+        { new Address() { Description = "RAMS Park, Huzur Mh., Metin Oktay Caddesi, 34386 Sarıyer/İstanbul", Type = "Work" } }
+    },
     Phones = new List<Phone>
     {
         { new Phone() { Number = "05554443322", Type = "Home" } },
