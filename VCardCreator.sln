@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VCardEncodeDecode", "VCardE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VCardEncodeDecode.Data", "VCardEncodeDecode.Data\VCardEncodeDecode.Data.csproj", "{F72DEEB2-0786-4DE4-B61A-A5811C09E612}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleForNuget", "ConsoleForNuget\ConsoleForNuget.csproj", "{C9C832AE-44B2-4D97-980D-B6E2B09B6B25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F72DEEB2-0786-4DE4-B61A-A5811C09E612}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F72DEEB2-0786-4DE4-B61A-A5811C09E612}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F72DEEB2-0786-4DE4-B61A-A5811C09E612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9C832AE-44B2-4D97-980D-B6E2B09B6B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C832AE-44B2-4D97-980D-B6E2B09B6B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C832AE-44B2-4D97-980D-B6E2B09B6B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C832AE-44B2-4D97-980D-B6E2B09B6B25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
