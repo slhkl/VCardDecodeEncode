@@ -5,7 +5,6 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
-
 		<PackageId>VCardEncodeDecode</PackageId>
 		<Version>1.1.0</Version>
 		<Title>VCardEncodeDecode</Title>

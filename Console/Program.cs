@@ -32,8 +32,8 @@ Contact contact = new Contact
     OrganizationPosition = "NT Team",
 };
 
-contact.CreateVCard().DecodeVCard();
+contact.EncodeVCard().DecodeVCard();
 
 string SavePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "salih.vcf");
-File.WriteAllText(SavePath, contact.CreateVCard());
+File.WriteAllText(SavePath, contact.EncodeVCard());
 Console.WriteLine("File saved at " + SavePath.Trim());

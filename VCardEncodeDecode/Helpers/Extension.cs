@@ -100,7 +100,7 @@ namespace VCardEncodeDecode.Helpers
             return contact;
         }
 
-        public static string CreateVCard(this Contact contact)
+        public static string EncodeVCard(this Contact contact)
         {
             StringBuilder fw = new StringBuilder();
             fw.Append(Header);
